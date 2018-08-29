@@ -1,0 +1,73 @@
+<midi app=" 2.0.2.1516">
+<!-- Another S9 custom midi mapping by DJ haveboard https://djhaveboard.com-->
+<!-- check out https://thisdjlife.com-->
+<!---->
+<!-- shout out to DJ Trees for giving me the heads up on this to make it happen!-->
+<!-- https://www.facebook.com/groups/360620997359460/permalink/1861552150599663/-->
+<!---->
+<!-- SHIFT + 1/2 will shift the loop back one loop length-->
+<!-- SHIFT + 2x will shift the loop forward one loop length-->
+<!-- Left and right deck respectively -->
+<!---->
+<!-- SHIFT +-->
+    <!--left deck - loop shift back--><control channel="1" event_type="Note On" control="16">
+        <userio event="click">
+            <shift_loop deck_set="Default" deck_id="0" slot_id="0">
+                <translation action_on="press" behaviour="explicit"/>
+            </shift_loop>
+        </userio>
+        <userio event="output">
+            <shift_loop deck_set="Default" deck_id="0" slot_id="0">
+                <translation action_on="any">
+                    <alias name="on" value="127"/>
+                    <alias name="off" value="0"/>
+                </translation>
+            </shift_loop>
+        </userio>
+    </control><!--end left deck - loop shift back-->
+    <!--left deck - loop shift forward--><control channel="1" event_type="Note On" control="17">
+        <userio event="click">
+            <shift_loop deck_set="Default" deck_id="0" slot_id="1">
+                <translation action_on="press" behaviour="explicit"/>
+            </shift_loop>
+        </userio>
+        <userio event="output">
+            <shift_loop deck_set="Default" deck_id="0" slot_id="1">
+                <translation action_on="any">
+                    <alias name="on" value="127"/>
+                    <alias name="off" value="0"/>
+                </translation>
+            </shift_loop>
+        </userio>
+    </control><!--end left deck - loop shift forward-->
+    <!--right deck - loop shift back--><control channel="2" event_type="Note On" control="16">
+        <userio event="click">
+            <shift_loop deck_set="Default" deck_id="1" slot_id="0">
+                <translation action_on="press" behaviour="explicit"/>
+            </shift_loop>
+        </userio>
+        <userio event="output">
+            <shift_loop deck_set="Default" deck_id="1" slot_id="0">
+                <translation action_on="any">
+                    <alias name="on" value="127"/>
+                    <alias name="off" value="0"/>
+                </translation>
+            </shift_loop>
+        </userio>
+    </control><!--end right deck - loop shift back-->
+    <!--right deck - loop shift forward--><control channel="2" event_type="Note On" control="17">
+        <userio event="click">
+            <shift_loop deck_set="Default" deck_id="1" slot_id="1">
+                <translation action_on="press" behaviour="explicit"/>
+            </shift_loop>
+        </userio>
+        <userio event="output">
+            <shift_loop deck_set="Default" deck_id="1" slot_id="1">
+                <translation action_on="any">
+                    <alias name="on" value="127"/>
+                    <alias name="off" value="0"/>
+                </translation>
+            </shift_loop>
+        </userio>
+    </control><!--end right deck - loop shift forward-->
+</midi>
